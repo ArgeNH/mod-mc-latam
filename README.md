@@ -31,5 +31,43 @@ Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) par
 - Twitter: [@arge_nino](https://twitter.com/arge_nino)
 - Instagram: [@arge.nino](https://instagram.com/arge.nino)
 
+## 🌱 Flujo de ramas y convención de nombres
+
+Para mantener el orden y facilitar la colaboración, sigue este flujo y convención para la creación de ramas:
+
+### Ramas principales
+
+- **main**: Rama principal, contiene el código listo para producción.
+- **NH-develop**: Rama de desarrollo principal. Aquí se integran las nuevas características antes de pasar a main.
+
+### Ramas secundarias (feature, fix, hotfix, etc.)
+
+Crea ramas a partir de `NH-developer` usando la siguiente sintaxis:
+
+- **NH-feature/[nombre-descriptivo]**: Para nuevas funcionalidades.
+  - Ejemplo: NH-feature/sistema-economia
+- **NH-fix/[nombre-descriptivo]**: Para corrección de errores.
+  - Ejemplo: NH-fix/corrige-bug-economia
+- **NH-hotfix/[nombre-descriptivo]**: Para correcciones urgentes en producción.
+  - Ejemplo: NH-hotfix/arreglo-crash-servidor
+- **NH-docs/[nombre-descriptivo]**: Para cambios en la documentación.
+  - Ejemplo: NH-docs/actualiza-readme
+
+### Flujo de trabajo recomendado
+
+1. Crea tu rama a partir de `NH-developer`:
+   ```bash
+   git switch NH-developer
+   git pull
+   git switch -c NH-feature/mi-nueva-funcionalidad
+   ```
+2. Realiza tus cambios y haz commits descriptivos.
+3. Haz push de tu rama:
+   ```bash
+   git push origin NH-feature/mi-nueva-funcionalidad
+   ```
+4. Abre un Pull Request hacia `NH-developer`.
+5. Espera revisión y mergea cuando esté aprobado.
+
 ---
 ⭐️ Desarrollado con ❤️ en Colombia
